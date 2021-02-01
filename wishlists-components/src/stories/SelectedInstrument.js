@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import './filterSelected.css';
 
 const SelectedInstrument = ({ isSelected, instrument, dispatch }) => {
+
   const handleClick = () => {
     if (isSelected) {
       dispatch({ type: 'DESELECT', payload: instrument });
@@ -11,8 +13,8 @@ const SelectedInstrument = ({ isSelected, instrument, dispatch }) => {
   };
 
   return (
-    <li onClick={handleClick}>
-      {isSelected ? "[x] " : "[ ] "}
+    <li className="selectedInstrumentItem" onClick={handleClick}>
+      <input checked={isSelected} type="checkbox" />
       {instrument.year} {instrument.make} {instrument.model}
     </li>
   );

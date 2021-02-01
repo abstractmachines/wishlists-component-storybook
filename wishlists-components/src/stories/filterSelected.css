@@ -1,0 +1,4 @@
+ul.selectedInstrumentList,
+li.selectedInstrumentItem {
+  list-style: none;
+}

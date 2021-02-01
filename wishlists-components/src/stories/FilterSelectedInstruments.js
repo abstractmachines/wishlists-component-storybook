@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import SelectedInstrument from './SelectedInstrument';
+import './filterSelected.css';
 
 const SELECT = "SELECT";
 const DESELECT = 'DESELECT'
@@ -23,7 +24,7 @@ const SelectedInstruments = ({instruments}) => {
   );
 
   return (
-    <ul>
+    <ul className="selectedInstrumentList">
       {instruments.map((instrument) => {
         const isSelected = Boolean(
           selectedInstruments.find((c) => c.id === instrument.id)
