@@ -18,6 +18,6 @@ const instrument = { id: 1, make: "Fender", model: "Stratocaster", year: 1965 }
 export const SelectedItem = Template.bind({});
 SelectedItem.args = {
   instrument: instrument,
-  dispatch: () => { return {type: 'SELECT', payload: instrument} },
+  // dispatch: () => { return {type: 'SELECT', payload: instrument} },
   isSelected: true
 };

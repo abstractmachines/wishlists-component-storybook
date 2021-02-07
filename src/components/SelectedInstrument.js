@@ -2,18 +2,10 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import '../styles/filterSelected.css';
 
-const SelectedInstrument = ({ isSelected, instrument, dispatch, onClick }) => {
-
-  const handleClick = () => {
-    if (isSelected) {
-      dispatch({ type: 'DESELECT', payload: instrument });
-    } else {
-      dispatch({ type: 'SELECT', payload: instrument });
-    }
-  };
+const SelectedInstrument = ({ isSelected, instrument, onClick }) => {
 
   return (
-    <li className="selectedInstrumentItem" onClick={handleClick}>
+    <li className="selectedInstrumentItem" onClick={onClick}>
       <input checked={isSelected} type="checkbox" />
       {instrument.year} {instrument.make} {instrument.model}
     </li>
@@ -21,7 +13,6 @@ const SelectedInstrument = ({ isSelected, instrument, dispatch, onClick }) => {
 }
 
 SelectedInstrument.propTypes = {
-  dispatch: PropTypes.func,
   instrument: PropTypes.object,
   isSelected: PropTypes.bool,
   onClick: PropTypes.func
@@ -34,7 +25,6 @@ SelectedInstrument.defaultProps = {
     year: 1959
   },
   isSelected: true,
-  dispatch: undefined,
   onClick: undefined
 }
 

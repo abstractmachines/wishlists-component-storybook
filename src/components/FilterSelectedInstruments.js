@@ -23,6 +23,14 @@ const SelectedInstruments = ({instruments}) => {
     []
   );
 
+  const handleClick = (isSelected, instrument) => {
+    if (isSelected) {
+      dispatch({ type: 'DESELECT', payload: instrument });
+    } else {
+      dispatch({ type: 'SELECT', payload: instrument });
+    }
+  };
+
   return (
     <ul className="selectedInstrumentList">
       {instruments.map((instrument) => {
@@ -35,6 +43,7 @@ const SelectedInstruments = ({instruments}) => {
             isSelected={isSelected}
             instrument={instrument}
             dispatch={dispatch}
+            onClick={handleClick(isSelected, instrument)}
           />
         );
       })}
