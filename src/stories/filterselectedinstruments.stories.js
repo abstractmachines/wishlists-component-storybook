@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SelectedInstruments from './FilterSelectedInstruments';
+import SelectedInstruments from '../components/FilterSelectedInstruments';
 
 export default {
   title: 'Example/FilterSelectedInstruments',
