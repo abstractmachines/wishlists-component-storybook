@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
+import '../styles/button.css';
 
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
@@ -30,3 +30,5 @@ Button.defaultProps = {
   size: 'medium',
   onClick: undefined,
 };
+
+export { Button }
