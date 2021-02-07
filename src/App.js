@@ -7,16 +7,12 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Musical Instrument Wishlists Component UI Library : React Storybook
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <p>
+          To intereact with the app, please run "npm run storybook" instead of "npm start". Thanks!
+        </p>
       </header>
     </div>
   );
