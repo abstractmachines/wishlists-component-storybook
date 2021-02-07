@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import SelectedInstrument from './SelectedInstrument';
-import './filterSelected.css';
+import '../styles/filterSelected.css';
 
 const SELECT = "SELECT";
 const DESELECT = 'DESELECT'

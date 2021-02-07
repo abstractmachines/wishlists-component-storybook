@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
-import './filterSelected.css';
+import '../styles/filterSelected.css';
 
-const SelectedInstrument = ({ isSelected, instrument, dispatch }) => {
+const SelectedInstrument = ({ isSelected, instrument, dispatch, onClick }) => {
 
   const handleClick = () => {
     if (isSelected) {
@@ -23,7 +23,8 @@ const SelectedInstrument = ({ isSelected, instrument, dispatch }) => {
 SelectedInstrument.propTypes = {
   dispatch: PropTypes.func,
   instrument: PropTypes.object,
-  isSelected: PropTypes.bool
+  isSelected: PropTypes.bool,
+  onClick: PropTypes.func
 }
 
 SelectedInstrument.defaultProps = {
@@ -31,7 +32,10 @@ SelectedInstrument.defaultProps = {
     make: 'Gibson',
     model: 'Les Paul Standard',
     year: 1959
-  }
+  },
+  isSelected: true,
+  dispatch: undefined,
+  onClick: undefined
 }
 
 export default SelectedInstrument;

@@ -1,10 +1,14 @@
 import React from 'react';
 
-import SelectedInstrument from './SelectedInstrument';
+import SelectedInstrument from '../components/SelectedInstrument';
 
 export default {
   title: 'Example/SelectedInstrument',
   component: SelectedInstrument,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+    onClick: { action: 'clicked' }
+  },
 };
 
 const Template = (args) => <SelectedInstrument {...args} />;
