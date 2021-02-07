@@ -43,7 +43,7 @@ const SelectedInstruments = ({instruments}) => {
             isSelected={isSelected}
             instrument={instrument}
             dispatch={dispatch}
-            onClick={handleClick(isSelected, instrument)}
+            onClick={() => { handleClick(isSelected, instrument) }}
           />
         );
       })}
