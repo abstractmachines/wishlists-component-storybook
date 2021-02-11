@@ -11,7 +11,7 @@ function App() {
         </p>
 
         <p>
-          To intereact with the app, please run "npm run storybook" instead of "npm start". Thanks!
+          Please run "npm run storybook" instead of "npm start". Thanks!
         </p>
       </header>
     </div>
